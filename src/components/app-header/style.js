@@ -42,7 +42,6 @@ export const HeaderWrapper = styled.div`
 `;
 
 export const SearchWrapper = styled.div`
-  z-index: 999;
   transition: height 250ms ease;
   height: ${(props) => (props.issearch ? "100px" : "0")};
 `;

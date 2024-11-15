@@ -93,7 +93,7 @@ const PictureBrowser = memo((props) => {
               )}
             </div>
           </div>
-          <div className="list">
+          <div className="img-list">
             <Indicator selectIndex={currentIndex}>
               {pictureUrls.map((item, index) => {
                 return (
@@ -106,7 +106,6 @@ const PictureBrowser = memo((props) => {
                   >
                     <img src={item} alt="" />
                   </div>
-
                 );
               })}
             </Indicator>

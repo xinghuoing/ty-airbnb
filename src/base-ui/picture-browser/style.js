@@ -94,7 +94,7 @@ export const BrowserWrapper = styled.div`
         }
       }
 
-      .list {
+      .img-list {
         margin-top: 6px;
         overflow: hidden;
         /* 给高度设置过渡动画 */

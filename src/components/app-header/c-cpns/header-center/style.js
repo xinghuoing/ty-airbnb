@@ -1,7 +1,13 @@
 import styled from "styled-components";
 
 export const CenterWrapper = styled.div`
+  /* position: relative;
+  display: flex;
+  justify-content: center;
+  height: 48px; */
+
   .search-bar {
+    /* position: absolute; */
     display: flex;
     justify-content: space-between;
     align-items: center;

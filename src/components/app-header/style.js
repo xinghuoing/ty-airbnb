@@ -1,9 +1,6 @@
 import styled from "styled-components";
 
 export const HeaderWrapper = styled.div`
-  border-bottom: 1px solid #eee;
-  font-size: 14px;
-
   &.fixed {
     position: fixed;
     z-index: 99;
@@ -15,8 +12,17 @@ export const HeaderWrapper = styled.div`
   .content {
     position: relative;
     z-index: 19;
-    background-color: #fff;
-    
+    background-color: ${(props) =>
+      props.theme.isAlpha
+        ? "rgba(255, 255, 255, 0)"
+        : "rgba(255, 255, 255, 1)"};
+
+    border-bottom: 1px solid #eee;
+    border-bottom-color: ${(props) =>
+      props.theme.isAlpha
+        ? "rgba(233, 233, 233, 0)"
+        : "rgba(233, 233, 233, 1)"};
+
     .top {
       display: flex;
       justify-content: center;
@@ -36,12 +42,12 @@ export const HeaderWrapper = styled.div`
     right: 0;
     top: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, .3);
+    background-color: rgba(0, 0, 0, 0.3);
     cursor: pointer;
   }
 `;
 
 export const SearchWrapper = styled.div`
   transition: height 250ms ease;
-  height: ${(props) => (props.issearch ? "100px" : "0")};
+  height: ${(props) => (props.isSearch ? "100px" : "0")};
 `;

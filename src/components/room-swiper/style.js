@@ -55,7 +55,7 @@ export const RswiperWrapper = styled.div`
     }
     .indicator {
       position: absolute;
-      z-index: 9;
+      z-index: 10;
       left: 0;
       right: 0;
       bottom: 10px;

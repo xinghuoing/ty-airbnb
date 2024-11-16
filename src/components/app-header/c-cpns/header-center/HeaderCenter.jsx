@@ -26,10 +26,10 @@ const HeaderCenter = memo((props) => {
     <CenterWrapper>
       {!isSearch && (
         <motion.div
-          initial={{ opacity: 0 }}
+          initial={{ opacity: 0, }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
+          transition={{ duration: 0.5, delay: 0.1, ease: 'easeInOut' }}
           className="search-bar"
           onClick={searchClickHandle}
         >
@@ -48,15 +48,19 @@ const HeaderCenter = memo((props) => {
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
         >
-          <SearchTabs titles={titles} tabClick={tabClickHandle} />
+          <SearchTabs
+            titles={titles}
+            tabClick={tabClickHandle}
+            tabIndex={tabIndex}
+          />
           <div className="infos">
             <AnimatePresence mode="wait">
               <motion.div
                 key={tabIndex}
                 initial={{ opacity: 0, x: 30 }}
-                animate={{ opacity: 1, x: 0,  }}
+                animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -30 }}
-                transition={{ duration: 0.3, ease: "easeInOut" }}
+                transition={{ duration: 0.3, ease: "linear" }}
                 style={{ willChange: "transform, opacity" }}
               >
                 <SearchSeactions

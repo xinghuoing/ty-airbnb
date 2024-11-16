@@ -14,6 +14,7 @@ export const SectionsWrapper = styled.div`
       align-items: center;
       border: 1px solid #ccc;
       border-radius: 25px;
+      background-color: #fff;
 
       .item {
         margin: 12px 0;

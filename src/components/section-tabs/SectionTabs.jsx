@@ -13,12 +13,13 @@ const SectionTabs = memo((props) => {
     tabClick(index, name);
   };
 
+
   return (
     <TabsWrapper>
       <ScrollView>
         {tabNames.map((item, index) => (
           <TabButton
-            isactive={currentIndex === index ? 1 : 0}
+            isActive={currentIndex === index ? 1 : 0}
             key={item}
             onClick={(e) => handleItemClick(index, item)}
           >
@@ -27,7 +28,7 @@ const SectionTabs = memo((props) => {
             {currentIndex === index && (
               <motion.div
                 className="bgc"
-                layoutId="activeBackground"
+                layoutId="activeBgc"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}

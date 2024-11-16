@@ -1,14 +1,13 @@
-import React, { memo, useState } from "react";
+import React, { memo } from "react";
 import { TabsWrapper } from "./style";
 import classNames from "classnames";
 
 const SearchTabs = memo((props) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const { titles, tabClick } = props;
+  const { titles, tabClick, tabIndex } = props;
 
   const itemClickHandle = (index) => {
     if (tabClick) tabClick(index)
-    setCurrentIndex(index)
+
   };
 
   return (
@@ -17,8 +16,9 @@ const SearchTabs = memo((props) => {
         {titles.map((item, index) => {
           return (
             <div
-              onClick={e => itemClickHandle(index)}
-              className={classNames("item", { active: currentIndex === index })}
+              key={item}
+              onClick={(e) => itemClickHandle(index)}
+              className={classNames("item", { active: tabIndex === index })}
             >
               {item}
             </div>

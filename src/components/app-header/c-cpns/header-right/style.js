@@ -11,12 +11,17 @@ export const RightWrapper = styled.div`
 
   .btns {
     display: flex;
+    color: ${(props) =>
+      props.theme.isAlpha ? "#fff" : props.theme.textColor.primaryColor};
+
     span {
       cursor: pointer;
-      padding: 5px;
-      margin-right: 10px;
+      padding: 8px 13px;
+      margin-right: 5px;
+      border-radius: 20px;
       &:hover {
-        background-color: #f5f5f5;
+        background-color: ${(props) =>
+          props.theme.isAlpha ? "rgba(255, 255, 255, .1)" : '#f5f5f5'};
       }
     }
   }

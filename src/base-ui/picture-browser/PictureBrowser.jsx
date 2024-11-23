@@ -50,10 +50,14 @@ const PictureBrowser = memo((props) => {
       <div className="slider">
         <div className="control">
           <div className="btn left" onClick={(e) => controlClickHandle(false)}>
-            <IconArrowLeftNobroad width="77" height="77" />
+            <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+              <IconArrowLeftNobroad width="77" height="77" />
+            </motion.div>
           </div>
           <div className="btn right" onClick={(e) => controlClickHandle(true)}>
-            <IconArrowRightNobroad width="77" height="77" />
+            <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+              <IconArrowRightNobroad width="77" height="77" />
+            </motion.div>
           </div>
         </div>
         <div className="picture">
@@ -88,7 +92,7 @@ const PictureBrowser = memo((props) => {
               ) : (
                 <div>
                   <span>显示图片列表</span>
-                  <IconTriangleArrowTop/>
+                  <IconTriangleArrowTop />
                 </div>
               )}
             </div>
